@@ -40,17 +40,40 @@ var paginationCreatedUl = document.getElementById("pagination-ul")
 // get Pagination item | Array.from[ES6 Feature]
 var PaginationsBullets = Array.from(document.querySelectorAll("#pagination-ul li"))
 
+// Loop Through All Bullets Items
+for (var i = 0; i < PaginationsBullets.length; i++) {
+
+	PaginationsBullets[i].onclick = function () {
+
+		currentSlide = parseInt(this.getAttribute("data-index"));
+
+		theChecker()
+	}
+}
+
 // trigger the Checker function
 theChecker()
 
 // Next Slide Function
 function nextSlide(item) {
-	console.log("next");
+	if (nextButton.classList.contains("disabled")) {
+		// Do Nothing
+		return false
+	} else {
+		currentSlide++;
+		theChecker()
+	}
 }
 
 // previous Slide Function
 function prevSlide() {
-	console.log("previous");
+	if (prevButton.classList.contains("disabled")) {
+		// Do Nothing
+		return false
+	} else {
+		currentSlide--;
+		theChecker()
+	}
 }
 
 
