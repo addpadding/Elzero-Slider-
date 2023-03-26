@@ -8,13 +8,13 @@ body {
   font-family: Tahoma, Arial;
 }
 
-.slider-container {
+.container_img {
   position: relative;
   margin: 10px auto;
   width: 1000px;
   height: 500px;
 }
-.slider-container .slider-number {
+.container_img .number {
   position: absolute;
   left: 10px;
   top: 10px;
@@ -25,7 +25,7 @@ body {
   z-index: 2;
   border-radius: 6px;
 }
-.slider-container img {
+.container_img img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -33,17 +33,17 @@ body {
   transition: opacity 1s;
   z-index: 1;
 }
-.slider-container img.active {
+.container_img img.active {
   opacity: 1;
 }
 
-.slider-control {
+.control {
   width: 800px;
   margin: auto;
   overflow: hidden;
 }
-.slider-control .prev,
-.slider-control .next {
+.control .prev_Button,
+.control .next_Button {
   background-color: #009688;
   color: #fff;
   font-size: 16px;
@@ -54,27 +54,27 @@ body {
   user-select: none;
   width: 20%;
 }
-.slider-control .prev {
+.control .prev_Button {
   float: left;
 }
-.slider-control .next {
+.control .next_Button {
   float: right;
 }
-.slider-control .prev.disabled,
-.slider-control .next.disabled {
+.control .prev_Button.disabled,
+.control .next_Button.disabled {
   background-color: rgba(0, 150, 136, 0.5);
   cursor: no-drop;
 }
-.slider-control .indicators {
+.control .bullets {
   width: 60%;
   float: left;
 }
-.slider-control .indicators ul {
+.control .bullets ul {
   list-style: none;
   margin: 0;
   text-align: center;
 }
-.slider-control .indicators ul li {
+.control .bullets ul li {
   display: inline-block;
   background-color: #f6f6f6;
   color: #333;
@@ -86,7 +86,7 @@ body {
   margin: 0 2px;
   cursor: pointer;
 }
-.slider-control .indicators ul li.active {
+.control .bullets ul li.active {
   background-color: #009688;
   color: #fff;
 }

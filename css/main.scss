@@ -9,7 +9,7 @@ body {
 }
 
 // 001
-.slider-container {
+.container_img {
     position: relative;
     margin: 10px auto;
 
@@ -20,7 +20,7 @@ body {
     height: 500px;
 
     // 002
-    .slider-number {
+    .number {
         position: absolute;
         left: 10px;
         top: 10px;
@@ -49,14 +49,14 @@ body {
 }
 
 // 001
-.slider-control {
+.control {
     width: 800px;
     margin: auto;
     overflow: hidden;
 
     // 002
-    .prev,
-    .next {
+    .prev_Button,
+    .next_Button {
         background-color: #009688;
         color: #fff;
         font-size: 16px;
@@ -68,22 +68,22 @@ body {
         width: 20%;
     }
 
-    .prev {
+    .prev_Button {
         float: left;
     }
 
-    .next {
+    .next_Button {
         float: right;
     }
 
-    .prev.disabled,
-    .next.disabled {
+    .prev_Button.disabled,
+    .next_Button.disabled {
         background-color: rgba(0, 150, 136, 0.5);
         cursor: no-drop;
     }
 
     // 002
-    .indicators {
+    .bullets {
         width: 60%;
         float: left;
 
